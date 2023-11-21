@@ -14,18 +14,15 @@ void insertion_sort_list(listint_t **list)
 
 	if (list == NULL || (*list)->next == NULL)
 		return;
-
 	node = *list;
 	node = node->next;
-
 	while (node != NULL)
 	{
 		temp = node;
 		next = node->next;
 		temp_next = temp->next;
 		temp_prev = temp->prev;
-
-		while (temp->prev != NULL && temp_prev->n > temp->n)
+	while (temp->prev != NULL && temp_prev->n > temp->n)
 		{
 		if (temp_next != NULL)
 			temp_next->prev = temp_prev;
